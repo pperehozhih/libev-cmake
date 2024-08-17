@@ -41,6 +41,10 @@
 #include <stdlib.h>
 #include <assert.h>
 
+#ifdef _WIN32
+#include <WinSock2.h>
+#endif
+
 #ifdef EV_EVENT_H
 # include EV_EVENT_H
 #else
