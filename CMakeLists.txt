@@ -40,15 +40,12 @@ target_include_directories(ev_static PUBLIC libev)
 
 add_library(ev::ev_static ALIAS ev_static)
 
-add_subdirectory(example)
-
 install(FILES 
     ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev++.h
     ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev.h
     ${CMAKE_CURRENT_SOURCE_DIR}/libev/event.h
     DESTINATION include
 )
-
 
 install(TARGETS ev_static
   RUNTIME DESTINATION bin
