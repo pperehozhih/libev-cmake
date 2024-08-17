@@ -20,6 +20,7 @@ configure_file (${CMAKE_CURRENT_SOURCE_DIR}/config.h.cmake ${CMAKE_CURRENT_BINAR
 set (EV_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev.c
   ${CMAKE_CURRENT_SOURCE_DIR}/libev/event.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev_select.c
 )
 
 if(WIN32)
