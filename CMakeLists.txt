@@ -23,10 +23,6 @@ set (EV_SRC
 )
 
 if(WIN32)
-  set(EV_SRC
-    ${EV_SRC}
-    ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev_win32.c
-  )
   list(APPEND EV_LIBS Ws2_32)
 endif()
 
@@ -49,14 +45,12 @@ add_subdirectory(example)
 install(FILES 
     ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev++.h
     ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev_vars.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/libev/ev_wrap.h
     ${CMAKE_CURRENT_SOURCE_DIR}/libev/event.h
     DESTINATION include
 )
 
 
-install(TARGETS ev
+install(TARGETS ev_static
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
