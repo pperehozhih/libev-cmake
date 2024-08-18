@@ -24,7 +24,7 @@ set (EV_SRC
 
 if(WIN32)
   list(APPEND EV_LIBS Ws2_32)
-  add_definitions(-DEV_USE_SELECT)
+  add_definitions(-DEV_USE_SELECT -DHAVE_SELECT -DHAVE_SYS_SELECT_H)
 endif()
 
 add_library(ev ${EV_SRC})
