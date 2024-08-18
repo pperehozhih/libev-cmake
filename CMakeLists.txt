@@ -27,7 +27,7 @@ if(WIN32)
   add_definitions(-DEV_USE_SELECT -DHAVE_SELECT -DHAVE_SYS_SELECT_H)
 endif()
 
-add_library(ev ${EV_SRC})
+add_library(ev SHARED ${EV_SRC})
 target_link_libraries (ev ${EV_LIBS})
 target_include_directories(ev PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 target_include_directories(ev PUBLIC libev)
